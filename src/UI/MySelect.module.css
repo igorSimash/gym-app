@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.muscleSelect {
+    @apply mx-3 px-3 border-2 border-fuchsia-900 rounded-xl select-none
+    active:border-purple-800 py-0.5 pb-1.5 w-80
+}
+
+.exerciseSelect {
+    @apply mx-3 px-3 border-2 border-fuchsia-900 rounded-xl select-none
+    active:border-purple-800 py-0.5 pb-1.5 w-96
+}
+
+@media only screen and (max-width: 1200px) {
+    .muscleSelect {
+        @apply w-40 text-lg px-1
+    }
+
+    .exerciseSelect {
+        @apply w-60 text-lg px-1
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .muscleSelect {
+        @apply w-32 h-8 text-sm pl-1 pr-0
+    }
+
+    .exerciseSelect {
+        @apply w-36 h-8 text-sm pl-1 pr-0
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .muscleSelect {
+        @apply text-lg w-full pl-1 h-full
+    }
+
+    .exerciseSelect {
+        @apply text-lg w-full pl-1 h-full
+    }
+}

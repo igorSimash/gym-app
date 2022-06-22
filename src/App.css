@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+    @apply flex justify-center
+}
+
+body {
+    overflow: hidden;
+    background: linear-gradient(45deg, #292929 25%, transparent 25%, transparent 75%, #292929 75%), linear-gradient(45deg, #292929 25%, transparent 25%, transparent 75%, #292929 75%) 0.1875em 0.1875em, radial-gradient(at 50% 0, #484847, #090909);
+    background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
+
+}
+
+.selectors {
+    @apply flex justify-evenly border-black border-3
+    border-t-0 rounded-3xl rounded-t-none
+    mx-8
+}
+
+.item {
+    @apply border-black border-2 px-3 rounded-2xl
+    text-white cursor-pointer
+    transition-all select-none hover:bg-purple-500
+    font-sans text-lg mx-0.5 my-5 py-3 font-medium
+
+}
+
+
+.screen {
+    @apply h-screen overflow-hidden
+    overflow-y-scroll w-screen select-none;
+}
+
+.screen::-webkit-scrollbar {
+    @apply w-0
+}
+
+/*Training Styles*/
+
+.all-inputs {
+    @apply flex justify-start py-4
+}
+
+.container {
+    @apply flex font-bold text-xl mx-7 my-10 w-fit
+}
+
+.date-container {
+    @apply pr-0
+}
+
+.date-container input {
+    @apply mx-3 px-3 border-2 border-fuchsia-900 rounded-xl select-none
+    active:border-purple-800 py-0.5
+}
+
+.date-container input::-webkit-calendar-picker-indicator {
+    @apply cursor-pointer
+}
+
+label {
+    @apply text-neutral-200 font-sans mt-0.5
+}
+
+.numbers-container {
+    @apply flex justify-center border-t-2 border-dashed border-gray-400 my-8
+}
+
+.numbers-container .container {
+    @apply grid text-center
+}
+
+.numbers-container .container input {
+    @apply mx-3 px-3 border-2 border-fuchsia-900 rounded-lg select-none
+    active:border-purple-800 py-0.5 pb-1.5 w-52 my-2
+}
+
+.numbers-container .container label {
+    @apply pl-0
+}
+
+.center-container {
+    @apply flex justify-center
+}
+
+.button {
+    @apply border-black border-2 rounded-3xl py-2 px-6 bg-purple-700 font-medium
+    text-fuchsia-100 hover:bg-purple-500 transition-all
+}
+
+.finish-button {
+    @apply -mt-2
+}
+
+.exercise-counter {
+    @apply flex justify-between text-neutral-200 border-gray-400 border-b-2 m-6 text-lg font-medium
+}
+
+/*RESULTS*/
+
+/*GRAPH*/
+
+.statistics-input {
+    @apply flex justify-between px-7
+}
+
+.graph {
+    @apply w-3/5
+}
+
+

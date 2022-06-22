@@ -1,0 +1,106 @@
+@media only screen and (max-width: 1200px) {
+    body {
+        @apply overflow-auto
+    }
+
+    .date-container input {
+        @apply text-lg
+    }
+
+    .numbers-container {
+        @apply mb-0
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .date-container input {
+        @apply w-32 h-8 text-sm px-2
+    }
+
+    label {
+        @apply text-lg
+    }
+
+    .numbers-container .container input {
+        @apply w-36 py-0
+    }
+
+    .numbers-container {
+        @apply mb-0
+    }
+
+    .item {
+        @apply py-1.5 text-sm my-3
+    }
+
+    .button {
+        @apply text-sm
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .date-container {
+        @apply my-0
+    }
+
+    .exercise-counter {
+        @apply mb-3.5
+    }
+
+    .all-inputs {
+        @apply block py-12 pb-0
+    }
+
+    .date-container input {
+        @apply w-full py-4 text-lg
+    }
+
+    label {
+        @apply text-lg
+    }
+
+    .finish-button {
+        @apply mt-6
+    }
+
+    .button {
+        @apply text-sm -mt-1
+    }
+
+    .exercise-counter {
+        @apply mt-0 mb-4
+    }
+
+    .numbers-container {
+        @apply pb-0
+    }
+
+    .graph {
+        @apply w-full
+    }
+
+    .statistics-input {
+        @apply block px-7 mb-16
+    }
+
+    .selectors {
+        @apply mx-0 rounded-none justify-start border-0 ml-2
+    }
+
+    .screen {
+        @apply border-t-3 border-black
+    }
+
+    .item {
+        @apply my-0 mt-6 border-b-0 rounded-none rounded-t-lg px-5
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+}
+
+@media only screen and (max-width: 320px) {
+
+}
