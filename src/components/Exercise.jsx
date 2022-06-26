@@ -6,20 +6,20 @@ const Exercise = ({date, exercise, reps, sumKg}) => {
     return (
         <div className={classes.result}>
             <div className={classes.container}>
-                <div>Дата</div>
-                <div>{date}</div>
+                <div>Date</div>
+                <div className={'text-red-600 underline'}>{date}</div>
             </div>
             <div className={classes.container}>
-                <div>Назва</div>
-                <div>{exercise}</div>
+                <div>Exercise</div>
+                <div className={'text-right text-red-600'}>{exercise}</div>
             </div>
             <div className={classes.container}>
-                <div>Підходи</div>
-                <div>{reps}</div>
+                <div>Sets</div>
+                <div className={'text-red-600'}>{reps}</div>
             </div>
             <div className={classes.container}>
-                <div>Сумарна маса</div>
-                <div>{sumKg}</div>
+                <div>Sum weight</div>
+                <div className={'text-red-600'}>{sumKg}</div>
             </div>
         </div>
     );

@@ -14,15 +14,15 @@ const Statistics = () => {
         <div>
             <div className={'statistics-input'}>
                 <div className="muscle-container container">
-                    <label>М'яз:</label>
-                    <MuscleSelect value={muscleType} options={muscles} defaultOption={"Оберіть групу м'язів"}
+                    <label>Muscle:</label>
+                    <MuscleSelect value={muscleType} options={muscles} defaultOption={"Choose muscle group"}
                                   onChange={selected => setMuscleType(selected)}/>
                 </div>
                 {
                     muscleType && <div className={"exercise-container container"}>
-                        <label>Вправа:</label>
+                        <label>Exercise:</label>
                         <ExerciseSelect muscle={muscleType} value={exercise} onChange={selected => setExercise(selected)}
-                                        defaultOption={"Оберіть вправу"} options={exercises}/>
+                                        defaultOption={"Choose exercise"} options={exercises}/>
                     </div>
                 }
             </div>

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .muscleSelect {
-    @apply mx-3 px-3 border-2 border-fuchsia-900 rounded-xl select-none
-    active:border-purple-800 py-0.5 pb-1.5 w-80
+    @apply mx-3 px-3 border-2 border-slate-700 shadow-lg shadow-slate-300 rounded-xl select-none
+    active:border-purple-800 py-0.5 pb-1.5
 }
 
 .exerciseSelect {
-    @apply mx-3 px-3 border-2 border-fuchsia-900 rounded-xl select-none
-    active:border-purple-800 py-0.5 pb-1.5 w-96
+    @apply mx-3 px-3 border-2 border-slate-700 shadow-lg shadow-slate-300 rounded-xl select-none
+    active:border-purple-800 py-0.5 pb-1.5
 }
 
 @media only screen and (max-width: 1200px) {

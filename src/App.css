@@ -7,30 +7,29 @@
 }
 
 body {
-    overflow: hidden;
-    background: linear-gradient(45deg, #292929 25%, transparent 25%, transparent 75%, #292929 75%), linear-gradient(45deg, #292929 25%, transparent 25%, transparent 75%, #292929 75%) 0.1875em 0.1875em, radial-gradient(at 50% 0, #484847, #090909);
-    background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
-
 }
 
 .selectors {
-    @apply flex justify-evenly border-black border-3
-    border-t-0 rounded-3xl rounded-t-none
-    mx-8
+    @apply flex justify-evenly border-black
+    rounded-lg rounded-t-none shadow-slate-900
+    shadow-lg bg-slate-800
 }
 
 .item {
-    @apply border-black border-2 px-3 rounded-2xl
-    text-white cursor-pointer
-    transition-all select-none hover:bg-purple-500
-    font-sans text-lg mx-0.5 my-5 py-3 font-medium
-
+    @apply  px-3 rounded-2xl
+    cursor-pointer transition-all select-none
+    hover:text-white
+    font-sans text-lg mx-0.5 my-7 font-medium
+    flex underline text-xl
+}
+.icon {
+    @apply text-3xl mx-2
 }
 
 
 .screen {
     @apply h-screen overflow-hidden
-    overflow-y-scroll w-screen select-none;
+    overflow-y-scroll w-screen select-none
 }
 
 .screen::-webkit-scrollbar {
@@ -40,7 +39,7 @@ body {
 /*Training Styles*/
 
 .all-inputs {
-    @apply flex justify-start py-4
+    @apply flex py-10
 }
 
 .container {
@@ -51,8 +50,9 @@ body {
     @apply pr-0
 }
 
+
 .date-container input {
-    @apply mx-3 px-3 border-2 border-fuchsia-900 rounded-xl select-none
+    @apply mx-3 px-3 border-2 border-slate-700 shadow-lg shadow-slate-300 rounded-xl select-none
     active:border-purple-800 py-0.5
 }
 
@@ -61,19 +61,19 @@ body {
 }
 
 label {
-    @apply text-neutral-200 font-sans mt-0.5
+    @apply text-black font-sans mt-0.5
 }
 
 .numbers-container {
-    @apply flex justify-center border-t-2 border-dashed border-gray-400 my-8
+    @apply flex justify-center border-t-2 border-dashed border-gray-400
 }
 
 .numbers-container .container {
-    @apply grid text-center
+    @apply grid text-center w-fit
 }
 
 .numbers-container .container input {
-    @apply mx-3 px-3 border-2 border-fuchsia-900 rounded-lg select-none
+    @apply mx-3 px-3 border-2 border-slate-700 shadow-lg shadow-slate-300 rounded-lg select-none
     active:border-purple-800 py-0.5 pb-1.5 w-52 my-2
 }
 
@@ -86,24 +86,38 @@ label {
 }
 
 .button {
-    @apply border-black border-2 rounded-3xl py-2 px-6 bg-purple-700 font-medium
-    text-fuchsia-100 hover:bg-purple-500 transition-all
+    @apply border-black border-2 rounded-3xl py-2 px-6 font-medium
+    text-white transition-all shadow-lg shadow-slate-300
+}
+
+.add-set-btn {
+    @apply bg-gray-600 bg-opacity-80 hover:bg-gray-400
 }
 
 .finish-button {
-    @apply -mt-2
+    @apply mt-1 bg-green-500 hover:bg-green-400
+}
+
+
+.delete-set-btn {
+    @apply bg-red-600 mt-10 hover:bg-red-500
 }
 
 .exercise-counter {
-    @apply flex justify-between text-neutral-200 border-gray-400 border-b-2 m-6 text-lg font-medium
+    @apply flex justify-between text-black border-gray-400 border-b-2 m-6 text-lg font-medium
 }
 
+
 /*RESULTS*/
+
+.history-result {
+    @apply grid grid-cols-2 justify-center gap-16 mx-10 my-10 mb-28
+}
 
 /*GRAPH*/
 
 .statistics-input {
-    @apply flex justify-between px-7
+    @apply flex justify-start px-7
 }
 
 .graph {

@@ -53,7 +53,7 @@ const Graph = ({exercise, muscle}) => {
             },
             title: {
                 display: true,
-                text: 'Прогрес',
+                text: 'Progress',
             },
         },
     };

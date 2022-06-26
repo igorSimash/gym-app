@@ -10,6 +10,7 @@
     .numbers-container {
         @apply mb-0
     }
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -30,11 +31,19 @@
     }
 
     .item {
-        @apply py-1.5 text-sm my-3
+        @apply py-1.5 text-lg my-3
     }
 
     .button {
         @apply text-sm
+    }
+
+    .history-result {
+        @apply gap-4 mx-5 mb-0
+    }
+
+    .graph {
+        @apply w-full
     }
 }
 
@@ -71,9 +80,21 @@
         @apply mt-0 mb-4
     }
 
+    .last-btn-container {
+        @apply flex justify-between mt-8 mx-20
+    }
+
     .numbers-container {
         @apply pb-0
     }
+
+    .numbers-container .container {
+        @apply my-3
+    }
+    .history-result {
+        @apply block my-6 mb-20
+    }
+
 
     .graph {
         @apply w-full
@@ -84,20 +105,55 @@
     }
 
     .selectors {
-        @apply mx-0 rounded-none justify-start border-0 ml-2
+        @apply mx-0 rounded-none border-0 w-full fixed bottom-0
     }
 
     .screen {
-        @apply border-t-3 border-black
+        @apply h-full
     }
 
     .item {
-        @apply my-0 mt-6 border-b-0 rounded-none rounded-t-lg px-5
+        @apply my-0 mt-6 px-5 block no-underline mt-0 my-0.5
+    }
+    .icon {
+        @apply m-0 mx-auto
     }
 }
 
 
 @media only screen and (max-width: 480px) {
+    .selectors {
+        @apply bottom-0 fixed mx-0 w-full justify-between
+    }
+
+    .item {
+        @apply block my-0 my-1.5 text-center items-center mx-0
+        no-underline
+    }
+
+    .icon {
+        @apply m-0 items-center mx-auto
+    }
+
+    .screen {
+        @apply border-none
+    }
+
+    .finish-button {
+
+    }
+
+    .exercise-counter {
+        @apply my-14
+    }
+
+    .delete-set-btn {
+        @apply bg-red-600 mt-9
+    }
+
+    .history-result {
+        @apply block mx-5 my-4
+    }
 
 }
 

@@ -1,26 +1,26 @@
 export const muscles = [
     {
-        group: "Груди",
+        group: "Chest",
         value: "chest"
     },
     {
-        group: "Спина",
+        group: "Back",
         value: "back"
     },
     {
-        group: "Ноги",
+        group: "Legs",
         value: "legs"
     },
     {
-        group: "Біцепс",
+        group: "Biceps",
         value: "biceps"
     },
     {
-        group: "Тріцепс",
+        group: "Triceps",
         value: "triceps"
     },
     {
-        group: "Плечі",
+        group: "Shoulders",
         value: "shoulders"
     },
 ]
@@ -28,26 +28,26 @@ export const muscles = [
 export const exercises = [
     {
         group: "chest",
-        name: ["Жим штанги лежачи", "Жим гантелей під кутом 45", "Кроссовер зверху", "Кроссовер знизу"]
+        name: ["Bench press", "Dumbbell press at an angle of 45", "Crossover from above", "Crossover from below"]
     },
     {
         group: "back",
-        name: ["Вертикальна тяга", "Горизонтальна тяга", "Підтягування з додатковою вагою", "Тяга Т-грифа", "Шраги з гантелями"]
+        name: ["Vertical thrust.", "Horizontal thrust", "Pull-ups with extra weight", "T-bar traction", "Shrag with dumbbells"]
     },
     {
         group: "legs",
-        name: ["Жим ногами", "Присідання з штангою", "Розгинання ніг сидячи", "Згинання ніг сидячи", "Станова тяга"]
+        name: ["Leg press", "Squats ", "Stretching legs", "Bending the legs ", "Deadlift"]
     },
     {
         group: "biceps",
-        name: ["Згинання рук з прямою штангою", "Згинання рук з Z-штангою", "Молотки з гантелями", "Згинання рук в тренажері"]
+        name: ["Bending the arms with a straight barbell", "Bending the arms with a Z-bar", "Hammers with dumbbells"]
     },
     {
         group: "triceps",
-        name: ["Жим лежачи вузьким хватом", "Розгинання штанги за головою", "Розгинання в блоці", "Розгинання рук з гантелями в наклоні"]
+        name: ["Press lying down with a narrow grip", "Stretching the barbell behind the head", "Extension in the block", "Stretching arms with dumbbells at an angle"]
     },
     {
         group: "shoulders",
-        name: ["Жим гантелей сидячи", "Махи руками в сторорни з гантелями", "Тяга штанги в наклоні"]
+        name: ["Dumbbell bench press while sitting", "Thrust barbell at an angle"]
     }
 ]

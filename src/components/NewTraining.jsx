@@ -32,7 +32,14 @@ const NewTraining = () => {
     }
 
     const endSet = async () => {
-        endExercise(date, exercise, muscleType, sets, sumKg, maxKg);
+        await endExercise(date, exercise, muscleType, sets, sumKg, maxKg);
+        setDate(null)
+        setMuscleType(null)
+        setExercise(null)
+        setSets([])
+    }
+
+    const delSet = () => {
         setDate(null)
         setMuscleType(null)
         setExercise(null)
@@ -46,7 +53,7 @@ const NewTraining = () => {
             {/*<button onClick={signUp}>signUp</button>*/}
             <div className={'all-inputs'}>
                 <div className="date-container container">
-                    <label>Дата:</label>
+                    <label>Date:</label>
                     <input onChange={(e) => setDate(e.target.valueAsDate)} type="date"
                            min="2021-01-01"/>
                 </div>
@@ -54,18 +61,18 @@ const NewTraining = () => {
                 {
                     date && (
                         <div className="muscle-container container">
-                            <label>М'яз:</label>
-                            <MuscleSelect value={muscleType} options={muscles} defaultOption={"Оберіть групу м'язів"}
+                            <label>Muscle:</label>
+                            <MuscleSelect value={muscleType} options={muscles} defaultOption={"Choose muscle group"}
                                           onChange={selected => setMuscleType(selected)}/>
                         </div>)
                 }
                 {
                     muscleType && date && (
                         <div className={"exercise-container container"}>
-                            <label>Вправа:</label>
+                            <label>Exercise:</label>
                             <ExerciseSelect muscle={muscleType} value={exercise}
                                             onChange={selected => setExercise(selected)}
-                                            defaultOption={"Оберіть вправу"} options={exercises}/>
+                                            defaultOption={"Choose exercise"} options={exercises}/>
                         </div>
                     )
                 }
@@ -75,19 +82,19 @@ const NewTraining = () => {
                 (<div>
                         <div className={"numbers-container"}>
                             <div className={"container kilograms-container"}>
-                                <label>Кілограм</label>
+                                <label>Kilograms</label>
                                 <input value={kilograms} onChange={(e) => setKilograms(e.target.value)} type="number"
                                        min="0"
                                        step="5"/>
                             </div>
                             <div className={'container'}>
-                                <label>Повторювань</label>
+                                <label>Reps</label>
                                 <input value={reps} onChange={(e) => setReps(e.target.value)} type="number" min="0"
                                        step="5"/>
                             </div>
                         </div>
                         <div className={"center-container"}>
-                            <button onClick={addSet} className={"button"}>Додати підхід</button>
+                            <button onClick={addSet} className={"button add-set-btn"}>Add set</button>
                         </div>
                     </div>
                 )
@@ -96,7 +103,7 @@ const NewTraining = () => {
                 sets.length > 0 &&
                 (<div>
                         <div className={'exercise-counter'}>
-                            <div>Вже є {counter} {counter === 1 ? 'підхід' : counter > 4 ? 'підходів' : 'підходи'}</div>
+                            <div>You have {counter} {counter === 1 ? 'rep' : 'reps'}</div>
                             <div className={"flex"}>
                                 {
                                     sets.map(currSet =>
@@ -104,9 +111,14 @@ const NewTraining = () => {
                                     )}
                             </div>
                         </div>
+                        <div className={"last-btn-container"}>
+                            <div className={"center-container"}>
+                                <button onClick={endSet} className={"button finish-button"}>Finish workout</button>
+                            </div>
 
-                        <div className={"center-container"}>
-                            <button onClick={endSet} className={"button finish-button"}>Завершити тренування</button>
+                            <div className="center-container">
+                                <button onClick={delSet} className="center-container delete-set-btn button">Delete set</button>
+                            </div>
                         </div>
                     </div>
                 )

@@ -59,7 +59,6 @@ export const getExercise = async () => {
                 }))
             .then(async () =>
                 await userbase.signOut())
-
     })
 }
 

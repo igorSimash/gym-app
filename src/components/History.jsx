@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Exercise from "./Exercise";
 import {getExercise} from "../utils/Userbase";
+import useSWR, { SWRConfig } from "swr";
 
 
 const History = () => {
@@ -9,10 +10,12 @@ const History = () => {
     useEffect(() => {
         getExercise().then(r => setState(r))
     }, [])
-
-
+    // const {data, error} = useSWR('', getExercise)
+    // console.log(data);
+    // if(error) return "Error";
+    // if(!data) return "Loader";
     return (
-        <div>
+        <div className={'history-result'}>
             {
                 state.map((item, index) =>
                     <Exercise

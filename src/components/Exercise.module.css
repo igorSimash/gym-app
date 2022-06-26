@@ -1,15 +1,26 @@
 
 .result {
-    @apply border-neutral-700 border-2 my-8
+    @apply border-neutral-700 border-2 my-1
 }
 
 .container {
-    @apply font-medium text-lg flex justify-between px-4 py-3 text-gray-300
+    @apply font-medium text-lg flex justify-between px-4 py-3 text-gray-800
+}
+
+@media only screen and (max-width: 768px) {
+    .results {
+
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .result {
-        @apply mx-2
+        @apply mx-2 my-4
+    }
+}
+@media only screen and (max-width: 480px) {
+    .result {
+        @apply my-3 mx-0
     }
 }
 
