@@ -13,7 +13,7 @@ const Menu = () => {
         <div className={'main'}>
             <div className="selectors">
                 <div
-                    className={`item ${selectedPage === 'training' ? 'text-white' : 'text-gray-300 opacity-80 hover:opacity-90'}`}>
+                    className={`item ${selectedPage === 'training' ? 'text-white' : 'text-gray-300 opacity-70 hover:opacity-90'}`}>
                     <BiDumbbell className={'icon'}/>
                     <div
                         className={`training`}
@@ -23,7 +23,7 @@ const Menu = () => {
                     </div>
                 </div>
                 <div
-                    className={`item ${selectedPage === 'history' ? 'text-white' : 'text-gray-300 opacity-80 hover:opacity-90'}`}>
+                    className={`item ${selectedPage === 'history' ? 'text-white' : 'text-gray-300 opacity-50 hover:opacity-90'}`}>
                     <FiClock className={'icon'}/>
                     <div
                         className={`history`}
@@ -33,7 +33,7 @@ const Menu = () => {
                     </div>
                 </div>
                 <div
-                    className={`item ${selectedPage === 'statistics' ? 'text-white' : 'text-gray-300 opacity-80 hover:opacity-90'}`}>
+                    className={`item ${selectedPage === 'statistics' ? 'text-white' : 'text-gray-300 opacity-50 hover:opacity-90'}`}>
                     <ImStatsBars className={'icon'}/>
                     <div
                         className={`statistics`}

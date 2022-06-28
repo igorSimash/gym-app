@@ -1,23 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Exercise from "./Exercise";
 import {getExercise} from "../utils/Userbase";
-import useSWR, { SWRConfig } from "swr";
-
+import useSWR from "swr";
+import Loader from "../UI/Loader";
 
 const History = () => {
-    const [state, setState] = useState([])
-
-    useEffect(() => {
-        getExercise().then(r => setState(r))
-    }, [])
-    // const {data, error} = useSWR('', getExercise)
-    // console.log(data);
-    // if(error) return "Error";
-    // if(!data) return "Loader";
+    const { data, error } = useSWR('exercise', getExercise)
+    console.log(data);
+    if(error) return "Error";
+    if(!data) return <Loader/>;
     return (
         <div className={'history-result'}>
             {
-                state.map((item, index) =>
+                data.map((item, index) =>
                     <Exercise
                         key={index}
                         date={`${new Date(item.item.date).getFullYear()}-${new Date(item.item.date).getMonth() + 1}-${new Date(item.item.date).getDate()}`}

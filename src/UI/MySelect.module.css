@@ -42,3 +42,12 @@
         @apply text-lg w-full pl-1 h-full
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .muscleSelect {
+        @apply pl-0 w-52
+    }
+    .exerciseSelect {
+        @apply pl-0
+    }
+}

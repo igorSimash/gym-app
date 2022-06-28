@@ -128,7 +128,7 @@
 
     .item {
         @apply block my-0 my-1.5 text-center items-center mx-0
-        no-underline
+        no-underline text-sm
     }
 
     .icon {
@@ -148,11 +148,27 @@
     }
 
     .delete-set-btn {
-        @apply bg-red-600 mt-9
+        @apply bg-red-600
     }
 
     .history-result {
-        @apply block mx-5 my-4
+        @apply block mx-5 my-4 mb-24
+    }
+
+    .last-btn-container {
+        @apply mx-6
+    }
+    .numbers-container {
+        @apply mt-20
+    }
+    .numbers-container .container {
+        @apply mt-10
+    }
+    .numbers-container .container input {
+        @apply pb-1
+    }
+    .add-set-btn {
+        @apply mt-6
     }
 
 }

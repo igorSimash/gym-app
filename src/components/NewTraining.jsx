@@ -117,7 +117,7 @@ const NewTraining = () => {
                             </div>
 
                             <div className="center-container">
-                                <button onClick={delSet} className="center-container delete-set-btn button">Delete set</button>
+                                <button onClick={delSet} className="delete-set-btn button">Delete set</button>
                             </div>
                         </div>
                     </div>

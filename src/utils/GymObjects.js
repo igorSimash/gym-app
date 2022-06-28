@@ -32,7 +32,7 @@ export const exercises = [
     },
     {
         group: "back",
-        name: ["Vertical thrust.", "Horizontal thrust", "Pull-ups with extra weight", "T-bar traction", "Shrag with dumbbells"]
+        name: ["Vertical thrust", "Horizontal thrust", "Pull-ups with extra weight", "T-bar traction", "Shrag with dumbbells"]
     },
     {
         group: "legs",
